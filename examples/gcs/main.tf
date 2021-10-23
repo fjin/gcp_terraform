@@ -1,5 +1,5 @@
 module "bucket" {
-  source = "../../modules/simple_bucket"
+  source = "../../modules/gcs"
 
   name       = var.name
   project_id = var.project_id
@@ -31,7 +31,7 @@ module "bucket" {
 
 
 module "log_bucket" {
-  source = "../../modules/simple_bucket"
+  source = "../../modules/gcs"
 
   name       = var.log_bucket_name
   project_id = var.project_id
@@ -58,7 +58,7 @@ module "log_bucket" {
 }
 
 //module "log_bucket2" {
-//  source = "../../modules/simple_bucket"
+//  source = "../../modules/gcs"
 //
 //  name       = "fan_log_bucket_2"
 //  project_id = "marine-equinox-325705"
